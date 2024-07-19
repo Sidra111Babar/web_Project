@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Bootstrap Project 1</title>
+</head>
+<body>
+  <div class="navAndSec1">
+    <nav class="navbar navbar-expand-md bg-body-tertiary mynavbar">
+        <div class="container-fluid p-2 g-0">    <!-- Nav Container -->
+          <a class="navbar-brand fs-2  fw-bold text-primary logo" href="#">Logo</a>    <!-- Logo -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>  <!--To make it Responsive Menu Button here -->
+          </button>
+          <div class="collapse navbar-collapse nav-linksContainer" id="navbarScroll">   <!-- All nav links Container -->
+            <ul class="navbar-nav  navbar-nav-scroll">   <!-- ul in which all li with anchor tag is present -->
+              <li class="nav-item">
+                <a class="nav-link active text-light fs-5" aria-current="page" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light fs-5" href="#about">About</a>
+              </li>
+                    <li class="nav-item dropdown">    <!-- nav link with Drop Down -->
+                <a class="nav-link dropdown-toggle text-light"  role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#actions">
+                   Actions
+                </a>
+                <ul class="dropdown-menu"  style="background: rgb(22, 24, 49); border: 1px solid white; box-shadow: 3px 3px 7px purple;padding:10px;">    <!-- one ul with all its li and a tags for dropdown -->
+                  <li><a class="dropdown-item" href="#">Action 1</a></li>
+                  <li><a class="dropdown-item" href="#">Action 2</a></li>
+                
+                  <li><a class="dropdown-item" href="#">Action 3</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link  text-light fs-5" aria-disabled="true" href="#services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light fs-5" aria-disabled="true" href="#team">Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light fs-5" aria-disabled="true" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- ----------------------------------------------Section no 2 ---------------------------------------->
+       <!---------------------------------Section no 2 me grid (usmy ak row us row me 2 col jo 2nd col me 2 buttons hn usmy modal or modal kay andar Carousel) -->
+       <section class="sec2" id="home">
+        <div class="container sec2Container g-0">
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="col-md-6 sec2col1">
+                    <img src="Codingman-Photoroom.png" class="img-fluid sec2img" alt="">  <!-- img-fluid is built in class of bootstrap -->
+                </div>
+                <div class="col-md-6 sec2Content ">
+                     <h1 class="sec2h text-primary">Lorem ipsum dolor sit amet.</h1>
+                     <p class="sec2p text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, similique.</p>
+                    
+                    <!-------------------------- Button 1 trigger modal ------------------------->
+                    <button type="button" class="sec2btns me-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Click Here
+                      </button>
+                      
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered sec2modalContainer">
+                          <div class="modal-content sec2modalContent">
+                            <div class="modal-header">
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">         <!-- Slider in modal -->
+                                <div id="carouselExampleIndicators" class="carousel slide">
+                                    <div class="carousel-indicators">
+                                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                      <div class="carousel-item active">
+                                        <img src="btn2Sliderimg1.jpg" class="d-block w-100 img-fluid sec2btn1sliderimg" alt="...">
+                                      </div>
+                                      <div class="carousel-item">
+                                        <img src="btn2Sliderimg2.jpg" class="d-block w-100 img-fluid sec2btn1sliderimg" alt="...">
+                                      </div>
+                                      <div class="carousel-item">
+                                        <img src="btn2Sliderimg3.jpg" class="d-block w-100 img-fluid sec2btn1sliderimg" alt="...">
+                                      </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                      <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                      <span class="visually-hidden">Next</span>
+                                    </button>
+                                  </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                     <!-------------------------- Button 2 trigger modal ------------------------->
+                    <button type="button" class="sec2btns" data-bs-toggle="modal" data-bs-target="#sec2btn2Modal">
+                        Click Here
+                    </button>
+                      
+                      <!-- Modal -->
+                      <div class="modal fade" id="sec2btn2Modal" tabindex="-1" aria-labelledby="sec2btn2ModalLabel" aria-hidden="true">
+                        <div class="modal-dialog sec2modalContainer">
+                          <div class="modal-content sec2modalContent">
+                            <div class="modal-header">
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div id="se2btn2indicators" class="carousel slide">
+                                    <div class="carousel-indicators">
+                                      <button type="button" data-bs-target="#se2btn2indicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                      <button type="button" data-bs-target="#se2btn2indicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                      <button type="button" data-bs-target="#se2btn2indicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                      <div class="carousel-item active">
+                                        <img src="btn1sliderimage1.jpg" class="d-block w-100 sec2btn1sliderimg" alt="...">
+                                      </div>
+                                      <div class="carousel-item">
+                                        <img src="btn1Sliderimg2.jpg" class="d-block w-100 sec2btn1sliderimg" alt="...">
+                                      </div>
+                                      <div class="carousel-item">
+                                        <img src="btn1Sliderimg3.jpg" class="d-block w-100 sec2btn1sliderimg" alt="...">
+                                      </div>
+                                    </div>
+                                    <button class="carousel-control-prev " type="button" data-bs-target="#se2btn2indicators" data-bs-slide="prev">
+                                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                      <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#se2btn2indicators" data-bs-slide="next">
+                                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                      <span class="visually-hidden">Next</span>
+                                    </button>
+                                  </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>   
+            </div>
+        </div>
+       </section>
+      </div>
+       <!-- ------------------------------------------Section no 3------------------------------- -->
+       <section class="sec3" id="about">
+             <div class="container mt-5 reveal">
+                <h2 class="text-center fs-1 fw-bold text-primary heading">About Us</h2>
+                <div class="row p-2">
+                    <div class="col-md-6">
+                        <p class="text-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid, eveniet illo. Necessitatibus quam ipsa soluta reprehenderit repellendus tempore molestiae eum.</p>
+                        <ul>
+                            <div class="row">
+                                <div class="col-1">
+                                   <li class='bx bx-check-circle text-primary'></li>
+                                </div>
+                                <div class="col-11">
+                                   <p class="text-light">Lorem ipsum dolor sit amet.</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-1">
+                                   <li class='bx bx-check-circle  text-primary'></li>
+                                </div>
+                                <div class="col-11">
+                                   <p class="text-light">Lorem ipsum dolor sit amet.</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-1">
+                                   <li class='bx bx-check-circle  text-primary'></li>
+                                </div>
+                                <div class="col-11">
+                                   <p class="text-light">Lorem ipsum dolor sit amet.</p>
+                                </div>
+                            </div>
+                            
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="col">
+                           <p class="text-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo esse corporis deleniti, quo laboriosam qui accusantium rerum exercitationem eius ipsa cumque inventore nostrum voluptatibus officiis reprehenderit accusamus veniam dignissimos debitis.</p>
+                           <button class="btn btn-outline-primary sec3btn">Read More</button>
+                        </div>
+                    </div>
+                </div>
+             </div>
+       </section>
+       <!-- ------------------------------------------------------Section no 4 -->
+        <section class="sec4">
+               <div class="container reveal">
+                <div class="row">
+                    <div class="col-md-6 d-flex align-items-center justify-content-center">
+                        <img src="ITHome.png" class="w-100 rounded-5 sec4img mt-5" alt="">
+                    </div>
+                    <div class="col-md-6 p-5">
+                        <h2 class="sec4h1 text-primary">Lorem ipsum dolor sit amet.</h2>
+                        <p class="sec4p text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, similique.</p>
+                        <div class="col sec4box p-4 mt-3 reveal">
+                            <div class="sec4iconpdisplay">
+                                <p class="colorChangeJs">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>    <!-- javascript click event on this paragraph to change color when click on right arrow -->
+                                <i data-bs-toggle="collapse" data-bs-target="#sec4icon1p" aria-expanded="false" aria-controls="collapseExample" class='bx bx-chevron-right'>  
+                                </i>     <!-- Bootstrap collapse class for right arrow and this collapse class will hide the content (Target of this collapse class is right arrow)-->  
+                            </div>
+                            <div class="collapse" id="sec4icon1p">     <!--This content is hidden by collapse class of bootstrap and will appear when click on right arrow(with the help of jquery)  -->
+                              <div >
+                                Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col sec4box p-4 mt-3 shadow reveal">
+                            <div class="sec4iconpdisplay">
+                                <p class="colorChangeJs">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <i data-bs-toggle="collapse" data-bs-target="#sec4icon2p" aria-expanded="false" aria-controls="collapseExample" class='bx bx-chevron-right'>  
+                                </i>
+                            </div>
+                            <div class="collapse" id="sec4icon2p">
+                              <div>
+                                Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col sec4box p-4 mt-3 shadow reveal">
+                            <div class="sec4iconpdisplay">
+                                 <p class="colorChangeJs">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                 <i data-bs-toggle="collapse" data-bs-target="#sec4icon3p" aria-expanded="false" aria-controls="collapseExample" class='bx bx-chevron-right'> </i>     
+                            </div>
+                            <div class="collapse" id="sec4icon3p">
+                              <div >
+                                Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+               </div>
+        </section>
+        <style>
+             
+        </style>
+        <!-- Section 5 -->
+        <section class="services" id="services">
+          <div class="container reveal">
+            <h2 class="text-center text-primary heading fs-1 fw-bold">Serivces</h2>
+            <p class="text-center text-light fw-bold">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, laboriosam.</p>
+            <div class="row reveal">
+              <div class=" col d-flex gap-2 p-3 sec5box m-2">
+                  <i class="bx bx-buildings  sec5icon" id="sec5icon1"></i>
+                  <p class="text-light mt-md-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, deleniti.</p>
+              </div>
+              <div class="col d-flex gap-2 p-3 sec5box m-2">
+                <i class="bx bx-line-chart sec5icon" id="sec5icon2"></i>
+                <p class="text-light mt-md-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, deleniti.</p>
+              </div>
+            </div>
+            <div class="row reveal">
+              <div class=" col d-flex gap-2 p-3 sec5box m-2">
+                <i class="bx bxs-business mt-1 sec5icon" id="sec5icon3"></i>
+                <p class="text-light mt-md-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, deleniti.</p>
+              </div>
+              <div class=" col d-flex gap-2 p-3 sec5box m-2">
+                <i class="bx bx-outline mt-1 sec5icon" id="sec5icon4"></i>
+                <p class="text-light mt-md-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, deleniti.</p>
+              </div>
+            </div>
+            <div class="row reveal">
+              <div class=" col d-flex gap-2 p-3 sec5box m-2">
+                <i class="bx bxl-xing mt-1 sec5icon" id="sec5icon5"></i>
+                <p class="text-light mt-md-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, deleniti.</p>
+              </div>
+              <div class=" col d-flex gap-2 p-3 sec5box m-2">
+                <i class="bx bx-collapse-alt mt-1 sec5icon" id="sec5icon6"></i>
+                <p class="text-light mt-md-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, deleniti.</p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+        <!-- Section 6 -->
+         <section class="sec6 reveal" id="actions">
+            <div class="container-flluid sec6Cont">
+              <div class="row">
+                 <div class="col-sm-8">
+                      <h2 class="heading text-primary fw-bold">Call To Action</h2>
+                      <p class="text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus iure vitae explicabo minus totam debitis similique ut ducimus est excepturi?</p>
+                 </div>
+                 <div class="col-sm-4">
+                       <button class="sec6btn">Call to Action</button>
+                 </div>
+              </div>
+            </div>
+         </section>
+
+         <!--  Section 7 -->
+         <section class="sec7">
+          <div class="container reveal">
+            <h2 class="heading text-primary text-center mt-3">Work Areas</h2>
+            <div class="row">
+              <div class="col-md-5 gap-2">
+                <div class="row">
+                  <div id="box1" class="col d-flex p-3 m-3 box shadow reveal">
+                    <i class="bx bx-current-location sec7icon"></i>
+                    <p class="text-light mt-md-3">Pakistan Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, deleniti.</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div id="box2" class="col d-flex p-3 m-3 box shadow reveal">
+                    <i class="bx bx-location-plus sec7icon mt-1"></i>
+                    <p class="text-light mt-md-3">Paris Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, deleniti.</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div id="box3" class="col d-flex p-3 m-3 box shadow reveal">
+                    <i class="bx bx-location-plus sec7icon mt-1"></i>
+                    <p class="text-light mt-md-3">America ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, deleniti.</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div id="box4" class="col d-flex p-3 m-3 box shadow reveal">
+                    <i class="bx bx-location-plus sec7icon mt-1"></i>
+                    <p class="text-light mt-md-3">UK ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, deleniti.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-7 mt-2">
+                <div id="carouselExampleFade" class="carousel slide carousel-fade">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="PK.jpg" class="d-block w-100 sec7img" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="ET_2.jpg" class="d-block w-100 sec7img" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="America.jpg" class="d-block w-100 sec7img" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="UK.jpg" class="d-block w-100 sec7img" alt="...">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Section no 8 -->
+         <section class="sec8 p-5" id="team">
+             <div class="container reveal">
+              <h2 class="heading text-primary text-center">Team Members</h2>
+              <div class="row mt-3">
+                <div class="col text-center reveal">
+                  <div class=" overlayshow">
+                    <img src="1_ui.webp" alt="" class="sec8img">
+                  <div class="overlay text-light">
+                       <div class="col sec8cions">
+                        <a href=""><i class="bx bxl-gmail"></i></a></i>
+                        <a href=""><i class="bx bxl-facebook"></i></a></i>
+                        <a href=""><i class="bx bxl-instagram"></i></a></i>
+                       </div>
+                  </div> 
+                </div>
+                  <p>Name</p>
+                  <p>Position</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="col text-center reveal">
+                  <div class=" overlayshow">
+                    <img src="2_ui.png" alt="" class="sec8img">
+                  <div class="overlay text-light">
+                       <div class="col sec8cions">
+                         <a href=""><i class="bx bxl-gmail"></i></a></i>
+                         <a href=""><i class="bx bxl-facebook"></i></a></i>
+                         <a href=""><i class="bx bxl-instagram"></i></a></i>
+                       </div>
+                  </div>
+                </div>
+                  <p class="sec8n">Name</p>
+                  <p>Position</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="col text-center reveal">
+                  <div class=" overlayshow">
+                    <img src="3_ui.jpg" alt="" class="sec8img">
+                  <div class="overlay text-light">
+                       <div class="col sec8cions">
+                        <a href=""><i class="bx bxl-gmail"></i></a></i>
+                        <a href=""><i class="bx bxl-facebook"></i></a></i>
+                        <a href=""><i class="bx bxl-instagram"></i></a></i>
+                       </div>
+                  </div>
+                </div>
+                  <p class="sec8n">Name</p>
+                  <p>Position</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col text-center reveal">
+                  <div class=" overlayshow">
+                    <img src="4_ui.jpg" alt="" class="sec8img">
+                  <div class="overlay text-light">
+                       <div class="col sec8cions">
+                        <a href=""><i class="bx bxl-gmail"></i></a></i>
+                        <a href=""><i class="bx bxl-facebook"></i></a></i>
+                        <a href=""><i class="bx bxl-instagram"></i></a></i>
+                       </div>
+                  </div>
+                </div>
+                  <p class="sec8n">Name</p>
+                  <p>Position</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="col text-center reveal">
+                  <div class=" overlayshow">
+                    <img src="5_Ui.png" alt="" class="sec8img">
+                  <div class="overlay text-light">
+                       <div class="col sec8cions">
+                        <a href=""><i class="bx bxl-gmail"></i></a></i>
+                        <a href=""><i class="bx bxl-facebook"></i></a></i>
+                        <a href=""><i class="bx bxl-instagram"></i></a></i>
+                       </div>
+                  </div>
+                </div>
+                  <p class="sec8n">Name</p>
+                  <p>Position</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="col text-center reveal">
+                  <div class=" overlayshow">
+                    <img src="6_ui.avif" alt="" class="sec8img">
+                  <div class="overlay ">
+                       <div class="col sec8cions">
+                        <a href=""><i class="bx bxl-gmail"></i></a></i>
+                        <a href=""><i class="bx bxl-facebook"></i></a></i>
+                        <a href=""><i class="bx bxl-instagram"></i></a></i>
+                       </div>
+                  </div>
+                </div>
+                  <p class="sec8n">Name</p>
+                  <p>Position</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+              </div>
+             </div>
+         </section>
+            <!-- Section no 9 -->
+             <section class="sec9">
+                <div class="container reveal">
+                   <h2 class="heading text-primary text-center">Work Images</h2>
+                    <p class="text-primary text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, id?</p>
+                    <div class="tabs text-light d-flex align-items-center justify-content-center flex-row gap-3 reveal">
+                      <div id="tab-1" class="tab-item">Netowrking</div>
+                      <div id="tab-2" class="tab-item">Cloud Computing</div>
+                      <div id="tab-3" class="tab-item">AI</div>
+                    </div>
+                    <div class="tab-content">
+                      <div class="container reveal">
+
+                        <div id="tab-1-content" class="tab-content-item show">
+                          <div class="row my-3">
+                            <div class="col mt-3 res">
+                            <img src="Netowrking.jpg" class="sec9img " alt="">
+                         </div>
+                            <div class="col mt-3">
+                            <img src="Networking2.png"  class="sec9img"alt="">
+                         </div>
+                         <div class="col mt-3 res">
+                           <img src="Networking3.webp"  class="sec9img" alt="">
+                         </div>
+                         </div>
+                       </div>
+                       <div id="tab-2-content" class="tab-content-item">
+                        <div class="row my-3">
+                          <div class="col mt-3">
+                          <img src="1_cc.jpg" class="sec9img" alt="">
+                       </div>
+                          <div class="col mt-3">
+                          <img src="2_cc.jpg"  class="sec9img"alt="">
+                       </div>
+                       <div class="col mt-3">
+                         <img src="3_cc.jpg"  class="sec9img" alt="">
+                       </div>
+                       </div>
+                       </div>
+                     <div id="tab-3-content" class="tab-content-item">
+                      <div class="row my-3">
+                        <div class="col mt-3">
+                        <img src="1_AI.avif" class="sec9img" alt="">
+                     </div>
+                        <div class="col mt-3">
+                        <img src="2_AI.jpg"  class="sec9img"alt="">
+                     </div>
+                     <div class="col mt-3">
+                       <img src="3_AI.jpg"  class="sec9img" alt="">
+                     </div>
+                     </div>
+                   </div>
+                    
+                    </div>
+                </div>
+             </section>
+<!-- ------------------------------Section no 10----------------------------------------->
+
+<section class="sec10">
+  <div class="container reveal">
+    <h3 class="heading text-center text-primary mt-5">Customer Review</h3>
+    
+    <div id="sec10Carousel" class="carousel carousel-light slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#sec10Carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#sec10Carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#sec10Carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#sec10Carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#sec10Carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        <button type="button" data-bs-target="#sec10Carousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+        
+      </div>
+      <div class="carousel-inner mt-3">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <div class="d-flex align-items-center justify-content-center">
+            <img src="1_ui.webp" class="sec10img " alt="...">
+              <div class="carousel-caption d-md-block text-light">
+                <h5 class="d-none d-md-block">Name</h5>
+                <p>Some representative placeholder content for the first slide.</p>
+              </div>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <div class="d-flex align-items-center justify-content-center">
+            <img src="2_ui.png" class="sec10img" alt="...">
+            <div class="carousel-caption d-md-block text-light">
+              <h5  class="d-none d-md-block">Name</h5>
+              <p>Some representative placeholder content for the second slide.</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <div class="d-flex align-items-center justify-content-center">
+            <img src="3_ui.jpg" class="sec10img" alt="...">
+            <div class="carousel-caption d-md-block text-light">
+              <h5  class="d-none d-md-block">Name</h5>
+              <p>Some representative placeholder content for the second slide.</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <div class="d-flex align-items-center justify-content-center">
+            <img src="4_ui.jpg" class="sec10img" alt="...">
+            <div class="carousel-caption d-md-block text-light">
+              <h5  class="d-none d-md-block">Name</h5>
+              <p>Some representative placeholder content for the second slide.</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <div class="d-flex align-items-center justify-content-center">
+            <img src="5_Ui.png" class="sec10img" alt="...">
+            <div class="carousel-caption d-md-block text-light">
+              <h5  class="d-none d-md-block">Name</h5>
+              <p>Some representative placeholder content for the second slide.</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-flex align-items-center justify-content-center">
+            <img src="6_ui.avif" class="sec10img" alt="...">
+            <div class="carousel-caption d-md-block text-light">
+              <h5  class="d-none d-md-block">Name</h5>
+              <p>Some representative placeholder content for the third slide.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+<!--------------------------------Section no 11------------------->
+<section class="sec11">
+        <div class="container text-light reveal">
+          <h3 class="heading text-center my-5 text-primary" id="contact">Contact </h3>
+              <div class="row">
+                <div class="col-md-6 text-center reveal">
+                     
+                        <div class="col-md-6 d-block my-3 sec11box">
+                             <i class="bx bx-phone"></i>
+                             <p>Phone NO</p>
+                             <p>0300 000000</p> 
+                        </div>
+   
+                                     
+                                         
+                      <div class="col-md-6 d-block my-3 sec11box">
+                          <i class="bx bxl-gmail"></i>
+                          <p>Email</p>
+                          <p>sidrab349@gmail.com</p> 
+                        </div>
+                        <div class="col-md-6 d-block my-3 sec11box">
+                          <i class="bx bxl-gmail"></i>
+                          <p>Facebook</p>
+                          <p>Get a Link</p>
+                        </div>
+                     
+                     
+                </div>
+                <div class="col-md-6 reveal">
+
+                    <form class="p-5 form">
+                    <div>
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <div id="emailHelp" class="form-text text-light">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+                </div>
+              </div>
+        </div>
+</section>
+          <footer class="footer">
+                  <div class="container reveal">
+                    <h2 class="heading text-center text-primary  p-5 mt-5">Important Links</h2>
+                    <div class="row">
+                        <div class="col-sm-3 text-light text-center">
+                             <h3 class="text-primary py-2">Useful Links</h3>
+                             <p><a href="">Home</a></p>
+                             <p><a href="">About</a></p>
+                             <p><a href="">Services</a></p>
+                             <p><a href="">Contact</a></p>
+                        </div>
+                        <div class="col-sm-3 text-light text-center">
+                            <h3 class="text-primary py-2">Services</h3>
+                            <p>Front End Web</p>
+                            <p>Marketing</p>
+                            <p>Project Management</p>
+                            <p>Graphic Designing</p>
+                        </div>
+                        <div class="col-sm-6 text-light px-5">
+                            <h3 class="text-primary py-2 text-center">Follow on</h3>
+                            <div class="d-sm-flex customMedia">
+                            <p class="mx-2"><i class="bx bxl-facebook ficon"></i>Facebook</p>
+                            <p class="mx-2"><i class="bx bxl-twitter ficon"></i>Twitter</p>
+                            <p class="mx-2"><i class="bx bxl-instagram ficon"></i>Instagram</p>
+                            <p class="mx-2"><i class="bx bxl-linkedin ficon"></i>LinkedIn</p>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+          </footer>
+          <footer>
+            <div class="container text-light" style="border-top: 2px solid gray;">
+              <div class="row p-3 text-center">
+                <div class="col-sm-6">
+                     <p>&copy All Rights Reserved</p>
+                </div>
+                <div class="col-sm-6">
+                    <p>Designed by Sidra Babar Ali</p>
+                </div>
+              </div>
+            </div>
+          </footer>
+        
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+          <script src="script.js"></script>
+</body>
+</html>
